@@ -244,20 +244,21 @@ export const socialLinks = [
   { name: 'YouTube', url: 'https://www.youtube.com/@acumenengservices', icon: 'yt' },
 ];
 
-export const formEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
 
 export const contactInfo = {
   address: '501, Sai Park Phase 5, near Man Pasand Sweets, Manjari Budruk, Maharashtra 412307',
-  phone: '+91 98765 43210',
+  phone: '+91 97309 60433',
   emails: [
     'kp.acumenengineering@gmail.com',
     'projects.acumenengineering@gmail.com',
   ],
   website: 'acumenengg.github.io',
   hours: 'Mon - Sat (9:00 AM - 6:00 PM)',
-  whatsapp: '919876543210',
+  whatsapp: '919730960433',
   mapEmbed:
     'https://www.google.com/maps?q=501,+Sai+Park+Phase+5,+near+Man+Pasand+Sweets,+Manjari+Budruk,+Maharashtra+412307&output=embed',
+  formEmbed:
+    'https://docs.google.com/forms/d/e/1FAIpQLSdPCiUdGP8uNB7yCGKudrUSCHdS-Yi0-gJzVswnITHloSToXw/viewform?embedded=true',
 };
 
 export const navLinks = [

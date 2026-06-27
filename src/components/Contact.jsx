@@ -1,44 +1,8 @@
-import { useState } from 'react';
-import { contactInfo, formEndpoint } from '../data/content';
+import { contactInfo } from '../data/content';
 import LazyScene3D from './LazyScene3D';
 import './Contact.css';
 
 export default function Contact() {
-  const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' });
-  const [status, setStatus] = useState('');
-
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('sending');
-
-    try {
-      const response = await fetch(formEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          name: formState.name,
-          email: formState.email,
-          phone: formState.phone,
-          message: formState.message,
-          _subject: 'New inquiry from Acumen Engineering Website',
-        }),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormState({ name: '', email: '', phone: '', message: '' });
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
-  };
-
   return (
     <section id="contact" className="section contact">
       <div className="container">
@@ -116,71 +80,23 @@ export default function Contact() {
             <div className="contact__visual">
               <LazyScene3D variant="office" />
             </div>
-            <form className="contact__form glass-card" onSubmit={handleSubmit}>
+            <div className="contact__form glass-card">
               <h3>Send Us a Message</h3>
-              <div className="contact__form-row">
-                <div className="contact__field">
-                  <label htmlFor="name">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div className="contact__field">
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="john@company.com"
-                  />
-                </div>
+              <div className="contact__form-embed">
+                <iframe
+                  title="Acumen Engineering Contact Form"
+                  src={contactInfo.formEmbed}
+                  width="640"
+                  height="440"
+                  frameBorder="0"
+                  marginHeight="0"
+                  marginWidth="0"
+                  loading="lazy"
+                >
+                  Loading…
+                </iframe>
               </div>
-              <div className="contact__field">
-                <label htmlFor="phone">Phone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formState.phone}
-                  onChange={handleChange}
-                  placeholder="+91 98765 43210"
-                />
-              </div>
-              <div className="contact__field">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-              <button type="submit" className="btn btn-primary contact__submit" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Sending...' : 'Send Message'}
-              </button>
-              {status === 'success' && (
-                <p className="contact__status contact__status--success">
-                  Thank you! We'll get back to you shortly.
-                </p>
-              )}
-              {status === 'error' && (
-                <p className="contact__status contact__status--error">
-                  Something went wrong. Please email us at {contactInfo.emails.join(' or ')}
-                </p>
-              )}
-            </form>
+            </div>
           </div>
         </div>
       </div>

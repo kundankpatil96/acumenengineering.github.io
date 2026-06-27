@@ -124,6 +124,21 @@
   margin-bottom: 1.25rem;
 }
 
+.contact__form-embed {
+  width: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--bg-glass);
+}
+
+.contact__form-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+}
+
 .contact__form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

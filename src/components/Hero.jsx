@@ -35,8 +35,11 @@ export default function Hero() {
             <span className="hero__highlight">Insight, Precision & Delivery</span>
           </h1>
           <p className="hero__subtitle">
-            Engineering solutions that combine innovation, accuracy and reliability.
-            From BIM modeling to steel detailing — we deliver excellence at every scale.
+            Acumen Engineering Services is your trusted engineering partner, delivering
+            high-quality Rebar Detailing, Precast Detailing, BIM Modeling, Structural
+            Engineering, Steel Detailing, and Project Support Services. We combine advanced
+            technology with industry expertise to provide accurate, efficient, and
+            cost-effective solutions that keep your projects on schedule and within budget.
           </p>
           <div className="hero__actions btn-row">
             <a href="#services" className="btn btn-primary">

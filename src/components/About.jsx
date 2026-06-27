@@ -10,8 +10,10 @@ export default function About() {
           <span className="section-tag">About Us</span>
           <h2 className="section-title">Engineering Excellence Since 2010</h2>
           <p className="section-subtitle">
-            Acumen Engineering Services is a trusted partner for civil and structural
-            engineering firms worldwide, delivering precision-driven BIM, CAD, and detailing solutions.
+            Acumen Engineering Services is your trusted engineering partner, delivering
+            high-quality engineering services that help contractors, fabricators, and consulting
+            engineers execute projects with confidence, accuracy, and efficiency within the
+            timeframe &amp; budget.
           </p>
         </div>
 

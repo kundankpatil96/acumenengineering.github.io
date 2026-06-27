@@ -27,8 +27,10 @@ export default function Services() {
           <span className="section-tag">Our Services</span>
           <h2 className="section-title">Comprehensive Engineering Solutions</h2>
           <p className="section-subtitle">
-            From rebar detailing to full BIM coordination — we provide end-to-end
-            structural engineering support tailored to your project needs.
+            Transforming structural designs into construction-ready solutions. From precise
+            Rebar Detailing, GA drawings &amp; shop drawings to advanced BIM coordination and
+            project support, we deliver accurate, efficient, and scalable engineering services
+            that keep your projects on schedule and within budget.
           </p>
         </div>
 
